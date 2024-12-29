@@ -1,8 +1,22 @@
 {
   "log": {
-    "level": "debug",
+    "level": "info",
     "timestamp": true
   },
+   "experimental": {
+    "clash_api": {
+      "external_controller": "0.0.0.0:9095",
+      "external_ui": "ui",
+      "secret": "",
+      "external_ui_download_url": "https://ghproxy.cc/https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+      "external_ui_download_detour": "🎯 全球直连",
+      "default_mode": "rule"
+    },
+    "cache_file": {
+      "enabled": true,
+      "path": "/etc/sing-box/cache.db",
+      "store_fakeip": false
+    }
   "dns": {
     "servers": [
       {
@@ -76,21 +90,12 @@
   },
   "inbounds": [
     {
-      "type": "tun",
-      "inet4_address": "172.19.0.1/30",
-      "mtu": 9000,
-      "auto_route": true,
-      "strict_route": true,
+      "type": "tproxy",
+      "tag": "tproxy-in",
+      "listen": "0.0.0.0",
+      "listen_port": 7895,
       "sniff": true,
-      "endpoint_independent_nat": false,
-      "stack": "system",
-      "platform": {
-        "http_proxy": {
-          "enabled": true,
-          "server": "127.0.0.1",
-          "server_port": 2080
-        }
-      }
+      "sniff_override_destination": false
     },
     {
       "type": "mixed",
@@ -99,7 +104,7 @@
       "sniff": true,
       "users": []
     }
-  ],
+    ],
   "outbounds": [
     {
       "tag": "🚀 节点选择",

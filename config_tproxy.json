@@ -454,24 +454,7 @@
           "keywords": [
             "(KR|Korea|KOR|首尔|韩|韓)"
           ]
-        }
-      ]
-    },
-    {
-      "tag": "🎥 奈飞节点",
-      "type": "selector",
-      "outbounds": [
-        "{all}"
-      ],
-      "filter": [
-        {
-          "action": "include",
-          "keywords": [
-            "(NF|奈飞|解锁|Netflix|NETFLIX|Media)"
-          ]
-        }
-      ]
-    },
+        },
     {
       "type": "direct",
       "tag": "direct"

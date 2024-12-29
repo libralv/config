@@ -2563,18 +2563,6 @@
           "207.45.72.0/22",
           "208.75.76.0/22"
         ],
-        "outbound": "🎥 奈飞视频"
-      },
-      {
-        "domain": [
-          "bahamut.akamaized.net",
-          "gamer-cds.cdn.hinet.net",
-          "gamer2-cds.cdn.hinet.net"
-        ],
-        "domain_suffix": [
-          "bahamut.com.tw",
-          "gamer.com.tw"
-        ],
         "outbound": "📺 巴哈姆特"
       },
       {
